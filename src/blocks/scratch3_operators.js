@@ -33,7 +33,9 @@ class Scratch3OperatorsBlocks {
             operator_contains: this.contains,
             operator_mod: this.mod,
             operator_round: this.round,
-            operator_mathop: this.mathop
+            operator_mathop: this.mathop,
+            operator_mathSquare: this.mathSquare,
+            operator_mathSquareRoot: this.mathSquareRoot
         };
     }
 
@@ -149,6 +151,29 @@ class Scratch3OperatorsBlocks {
         }
         return 0;
     }
+    mathSquare (args) {
+        const num = parseFloat(args.NUM);
+        return num * num;
+    }
+
+    mathSquareRoot (args) {
+        const num = parseFloat(args.NUM);
+        return Math.sqrt(num);
+    }
 }
 
 module.exports = Scratch3OperatorsBlocks;
+
+// Scratch3OperatorsBlocks.extensions.mathSquare = function () {
+//     this.mathSquare = function (args) {
+//         const num = parseFloat(args.NUM);
+//         return num * num;
+//     };
+// };
+
+// Scratch3OperatorsBlocks.extensions.mathSquareRoot = function () {
+//     this.mathSquareRoot = function (args) {
+//         const num = parseFloat(args.NUM);
+//         return Math.sqrt(num);
+//     };
+// };
